@@ -69,11 +69,11 @@ ID(0x02/0x03): 0x001cc852
    ```
 
 ## Installation
-Download usb_mdio_adapter.uf2 (for Pico) from the latest release. LINK???
+Download usb_mdio_adapter.uf2 (for Pico) from the [latest release](https://github.com/AlbrechtL/usb-mdio-adapter/releases).
 
 Push and hold the BOOTSEL button as you plug the debugger device into your computer to mount a volume called "RPI-RP2".
 
-Copy the UF2 file onto the volume. The volume will dismount automatically after the file finishes copying onto the device.
+Copy the UF2 file `usb-mdio-adapter.uf2` onto the volume. The volume will dismount automatically after the file finishes copying onto the device.
 
 Your device will reboot and now runs the USB to MDIO adapter firmware. 
 
@@ -92,4 +92,4 @@ It is now ready.
 Please follow the SDK installation instructions for the Raspberry Pi Pico. Checkout this repository open Visual Studio Code and compile it.
 
 ## Support
-Just raise up an issue https://github.com/AlbrechtL/usb-mdio-adapter/issues.
+Just raise up an [issue](https://github.com/AlbrechtL/usb-mdio-adapter/issues).
