@@ -19,7 +19,7 @@ Wire up the `MDC` and `MDIO` pins to your chip. Please note that the RP2040 uses
 
 ![Raspberry Pi Pico 1 pinout](pictures/pico-pinout.svg)
 
-**MDIO pin connection table**
+#### MDIO pin connection table
 | Pin      | GPIO    | Function |
 | -------- | ------- | -------- |
 | 18       | -       | Ground   |
@@ -28,7 +28,7 @@ Wire up the `MDC` and `MDIO` pins to your chip. Please note that the RP2040 uses
 
 The UART ports (8N1, baud. 115200) are just for debugging. The RAW MDIO data is visible there.
 
-**LED**
+#### LED
 The Raspberry Pi Pico has an built-in LED with the following function.
 
 | State    | Function         |  
@@ -37,7 +37,7 @@ The Raspberry Pi Pico has an built-in LED with the following function.
 | Off      | USB error        |
 | blinking | USB/MDIO traffic |
 
-**Realtek RTL8305CS example with `mdio-tools`**
+#### Realtek RTL8305CS example with `mdio-tools`
 You can get `mdio-tools` here https://github.com/wkz/mdio-tools
 
 *Get link status*
