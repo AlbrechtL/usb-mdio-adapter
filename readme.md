@@ -69,7 +69,7 @@ ID(0x02/0x03): 0x001cc852
    ```
 
 ## Installation
-Download usb_mdio_adapter.uf2 (for Pico) from the [latest release](https://github.com/AlbrechtL/usb-mdio-adapter/releases).
+Download `usb-mdio-adapter.uf2` from the [latest release](https://github.com/AlbrechtL/usb-mdio-adapter/releases).
 
 Push and hold the BOOTSEL button as you plug the debugger device into your computer to mount a volume called "RPI-RP2".
 
