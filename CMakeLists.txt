@@ -28,7 +28,7 @@ set(PICO_BOARD pico CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(usb_mdio_adapter C CXX ASM)
+project(usb-mdio-adapter C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
@@ -36,23 +36,23 @@ pico_sdk_init()
 # Add executable. Default name is the project name, version 0.1
 
 if (TARGET tinyusb_device)
-    add_executable(usb_mdio_adapter
+    add_executable(usb-mdio-adapter
         main.c
         usb_mvmdio.c
         mdio.c
     )
 
     # pull in common dependencies
-    target_link_libraries(usb_mdio_adapter pico_stdlib)
+    target_link_libraries(usb-mdio-adapter pico_stdlib)
 
     # enable usb output, disable uart output
-    #pico_enable_stdio_usb(usb_mdio_adapter 1)
-    #pico_enable_stdio_uart(usb_mdio_adapter 0)
+    #pico_enable_stdio_usb(usb-mdio-adapter 1)
+    #pico_enable_stdio_uart(usb-mdio-adapter 0)
 
     # create map/bin/hex/uf2 file etc.
-    pico_add_extra_outputs(usb_mdio_adapter)
+    pico_add_extra_outputs(usb-mdio-adapter)
 
     # add url via pico_set_program_url
 elseif(PICO_ON_DEVICE)
-    message("Skipping usb_mdio_adapter because TinyUSB submodule is not initialized in the SDK")
+    message("Skipping usb-mdio-adapter because TinyUSB submodule is not initialized in the SDK")
 endif()
