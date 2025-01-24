@@ -31,11 +31,11 @@ The UART ports (8N1, baud. 115200) are just for debugging. The RAW MDIO data is 
 #### LED
 The Raspberry Pi Pico has an built-in LED with the following function.
 
-| State    | Function         |  
-| -------- | ---------------- |
-| On       | USB initialized  |
-| Off      | USB error        |
-| blinking | USB/MDIO traffic |
+| State    | Function                        |  
+| -------- | ------------------------------- |
+| On       | USB initialized                 |
+| Off      | USB error or device not powered |
+| blinking | USB/MDIO traffic                |
 
 #### Realtek RTL8305CS example with `mdio-tools`
 You can get `mdio-tools` here https://github.com/wkz/mdio-tools
