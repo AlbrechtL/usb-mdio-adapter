@@ -33,8 +33,8 @@ The Raspberry Pi Pico has an built-in LED with the following function.
 
 | State    | Function                        |  
 | -------- | ------------------------------- |
-| On       | USB initialized                 |
-| Off      | USB error or device not powered |
+| on       | USB initialized                 |
+| off      | USB error or device not powered |
 | blinking | USB/MDIO traffic                |
 
 #### Realtek RTL8305CS example with `mdio-tools`
