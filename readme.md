@@ -77,7 +77,7 @@ Copy the UF2 file `usb-mdio-adapter.uf2` onto the volume. The volume will dismou
 
 Your device will reboot and now runs the USB to MDIO adapter firmware. 
 
-Check your Kernel log (e.g. `dmesg)` you should see
+Check your kernel log (e.g. `dmesg)` you should see
    ```
 [  +3,286310] usb 1-2: new full-speed USB device number 49 using xhci_hcd
 [  +0,152680] usb 1-2: New USB device found, idVendor=1286, idProduct=1fa4, bcdDevice= 0.00
