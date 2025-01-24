@@ -92,4 +92,4 @@ It is now ready.
 Please follow the SDK installation instructions for the Raspberry Pi Pico. Checkout this repository open Visual Studio Code and compile it.
 
 ## Support
-Just raise up an issue.
+Just raise up an issue https://github.com/AlbrechtL/usb-mdio-adapter/issues.
