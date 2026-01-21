@@ -39,6 +39,7 @@ if (TARGET tinyusb_device)
     add_executable(usb-mdio-adapter
         main.c
         usb_mvmdio.c
+        realtek-smi.c
         mdio.c
     )
 

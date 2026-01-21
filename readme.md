@@ -1,9 +1,9 @@
-# Generic USB to MDIO adapter
-This is an open source clone of a Marvell MDIO USB adapter which can be used to interface MDIO of Ethernet switch chips and PHYs. Mainline Linux kernel is there is as interface hardware a Raspberry Pi Pico 1 is used.
+# USB to Realtek SMI adapter
+This is an open source clone of a Marvell MDIO USB adapter which can be used to interface Realtek Ethernet switch chips via SMI. Mainline Linux kernel is there is as interface hardware a Raspberry Pi Pico 1 is used.
 
 
 ## Features
-* Generic interface to MDIO Ethernet switch chips and Ethernet PHYs
+* Implements Realtek SMI protocol
 * Mainline Linux kernel support due [mvusb driver](https://elixir.bootlin.com/linux/v6.12.6/source/drivers/net/mdio/mdio-mvusb.c)
   * Interfacing the Linux MDIO subsystem
   * Usage of tools like `mdio-tools` (https://github.com/wkz/mdio-tools)

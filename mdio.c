@@ -8,17 +8,25 @@
 
 #include "pico/stdlib.h"
 
-#define PULSE_DELAY_US 10 // 50 kHz MDIO cycle. With 5 kHz the Linux mdio bus ran into a timeout.
+#define PULSE_DELAY_US 20 // 50 kHz MDIO cycle. With 5 kHz the Linux mdio bus ran into a timeout.
 
 const uint MDC_PIN = 14;
 const uint MDIO_PIN = 15;
 
 void mdio_init(void) {
     gpio_init(MDC_PIN);
+    //gpio_pull_up(MDC_PIN);
     gpio_set_dir(MDC_PIN, GPIO_OUT);
 
     gpio_init(MDIO_PIN);
+    //gpio_pull_up(MDIO_PIN);
     gpio_set_dir(MDIO_PIN, GPIO_OUT);
+
+    gpio_put(MDIO_PIN, true);
+    gpio_put(MDC_PIN, false);
+
+    busy_wait_us_32(PULSE_DELAY_US * 100);
+    // mdio_pulse();
 }
 
 void mdio_pulse(void) {
@@ -34,6 +42,8 @@ void mdio_pulse(void) {
 uint16_t mdio_read(uint8_t phy, uint8_t reg) {
     uint8_t byte;
     uint16_t word, data;
+
+    mdio_init();
 
     /* MDIO pin is output */
     gpio_set_dir(MDIO_PIN, GPIO_OUT);
